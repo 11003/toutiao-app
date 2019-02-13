@@ -1,0 +1,57 @@
+/* pages/user/user.wxss */
+#header{
+	height: 240rpx;
+	display: flex;
+	align-items: center;
+	padding-left: 50rpx;
+}
+.info{
+	padding-left: 40rpx;
+	align-items: center;
+}
+.name{
+}
+.category{
+	margin-top: 10rpx;
+	display:block;
+	font-size: 26rpx;
+	color: #2185d0;
+	box-shadow:0 0 0 1px #2185d0 inset;
+	border-radius: .28571429rem;
+	padding:8rpx .5em;
+}
+#user-info{
+	height: 135rpx;
+	display: flex;
+	align-items: center;
+	border-top:1rpx dotted  #EEE;
+}
+#user-info > view{
+	  flex: 1 1 374rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#user-info text{
+	display:block;
+  font-size:24rpx;
+}
+
+
+.gap{
+  height:30rpx;
+  background:#f5f5f5;
+}
+
+#shoucang .title{
+  font-size:30rpx;
+  padding-left:40rpx;
+  padding-top:35rpx;
+}
+
+.shoucang-list{
+  text-align: center;
+  padding-top:45rpx;
+  font-size: 30rpx;
+  color:#999999;
+}

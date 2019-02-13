@@ -1,0 +1,117 @@
+<!--index.wxml-->
+<view id='header'>
+  <!-- 搜索框 start -->
+  <navigator url="../search/search" class="navigator-hover">
+  <view class="search pull-left">
+    <image src="../../images/search.png" style="width:42rpx;height:44rpx;"></image>
+  </view>
+  </navigator>
+  <!-- 搜索框 end -->
+
+  <!-- 频道 start -->
+  <scroll-view 
+  scroll-into-view="{{activeChannel}}"
+  scroll-with-animation="true"
+  scroll-x class="channels pull-left">
+  	<view 
+    id="{{item.id}}"
+    bindtap='ChangeChannels'
+    data-id='{{ item.id }}'
+    data-index='{{ index }}'
+    class="{{ item.id == activeChannel ? 'active' : ''}}" wx:for="{{ channels }}">{{ item.name }}</view>
+  </scroll-view>
+  <!-- 频道 end -->
+
+  <!-- 加号 start -->
+  <view class="plus pull-left" bindtap='showPinDao'>
+    <image class="" src="../../images/plus.png" style="width:42rpx;height:44rpx"></image>
+  </view>
+  <!-- 加号 end -->
+
+  <!-- 用户 start -->
+  <view class="user pull-left">
+    <navigator class="" url="../user/user">
+      <image class="" src="../../images/user.png" style="width:42rpx;height:44rpx;margin-top:12rpx"></image>
+    </navigator>
+  </view>
+</view>  
+<view class="gap" hidden="{{promptHidden}}">{{prompt}}</view>   
+<view id="content" style='height:{{height}}px'>
+  <!-- 横向滚动 swiper/swiper-item -->
+  <swiper current-item-id="{{ activeChannel }}" bindchange='swiperChangeChannel'>
+    <swiper-item wx:for="{{ channels }}" wx:for-item="pindao" item-id="{{pindao.id}}" data-index="{{pindao.index}}">
+    <!-- 上下滚动 -->
+      <scroll-view lower-threshold='50' bindscrolltolower='lower' class="news-list" scroll-y="true">
+        <view class="item" wx:for="{{pindao.data}}" style="height:{{(height/6)-1}}px">
+        <navigator class="" url="../detail/detail?id={{item.id}}" open-type="navigate">
+          <!-- 标题 start -->
+          <view class="body">
+            <view class="title">{{ item.title }}</view>
+            <view class="img">
+              <image class="" src="{{item.img}}"  style="width:136rpx;height:136rpx;"></image>
+            </view>
+          </view>
+          <!-- 标题 end -->
+          <!-- 媒体 start -->
+          <view class="media-close">
+            <view class="media">
+              {{item.source}}   {{item.replyCount}}评论
+            </view>
+            <view bindtap='close' data-index='{{ index }}'>
+              <image class="" src="../../images/close-3.png" style="width:50rpx;height:30rpx"></image>
+            </view>
+          </view>
+          <!-- 媒体 end --> 
+        </navigator>
+    
+        </view>
+
+      </scroll-view>
+    </swiper-item>
+  </swiper>
+</view>
+
+<view id='mark' wx:if="{{isShowPinDao}}">
+  <!-- 关闭按钮 start   -->
+  <view class="close" bindtap='hidePinDao'>
+    <image class="" src="../../images/close.png" style="width:32rpx;height:32rpx;"></image>
+  </view>
+  <!-- 关闭按钮 end   -->
+
+  <!-- 我的频道 start -->
+  <view class="mine-channels">
+    <view class="title">
+      <text class="b-title">我的频道</text> 
+      <text class="s-title">按住不放可以排序</text>
+    </view>
+    <view class="channels">
+      <view class="item" wx:for="{{[1,1,1,1,1,1,1,1]}}">
+        <view class="title">娱乐</view>
+        <view class="close" bindtap='delMypindao' data-index='{{index}}'>
+          <image class="" src="../../images/close-2.png" style="width:32rpx;height:32rpx;"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 我的频道 end  -->
+
+  <!-- 其他频道 start -->
+  <view class="other-channels">
+    <view class="title">
+      <text class="b-title">其他频道</text> 
+      <text class="s-title">点击添加频道</text>
+    </view>
+    <view class="channels">
+      <view class="item" wx:for="{{[1,1,1,1,1,1,1,1]}}">
+        <view class="title" bind:tap='addMypindao' data-index='{{index}}'>+ 推荐</view>
+      </view>
+    </view>
+  </view>
+  <!-- 其他频道 end -->
+</view>
+<!-- logo展示 -->
+<view id="loadingLogo" hidden="{{isShowLogo}}">
+  <view class="title">
+    你关心的才是头条
+  </view>
+</view>

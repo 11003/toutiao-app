@@ -1,0 +1,68 @@
+/* pages/detail/detail.wxss */
+@import "../../wxParse/wxParse.wxss";
+#content{
+  min-height:100rpx;
+  padding:30rpx 20rpx;
+  /*border-bottom:solid 1px #ddd;*/
+  overflow: hidden;
+}
+
+.title{
+	font-size:44rpx;
+	font-weight: bold;
+	padding-bottom: 40rpx;
+}
+.hr{
+  height:1rpx;
+  border:solid 1px #ddd;
+  margin: 20rpx 0rpx;
+}
+.content{
+  overflow-x: hidden;
+	/*text-indent: -2em;*/
+  line-height:1.5em;
+}
+.wxParse-p{
+  text-indent: .1em;
+}
+
+.media .source{
+  margin-bottom: 10rpx;
+  font-size:26rpx;
+}
+
+.media .time{
+  font-size: 18rpx;
+  color:#9a9a9a;
+}
+
+.content {
+  padding-top:50rpx;
+  text-indent: 2em;
+  font-size:30rpx;
+}
+#comment{
+  padding:0 30rpx;
+  padding-top: 20rpx;
+  border:1px solid #EEE;
+  background-color: #EEE;
+  height:100rpx;
+  width: 687rpx;
+  position: fixed;
+  bottom: 0;
+}
+.input-content{
+ 
+  background-color: #fff;
+  border:1rpx solid #EEE;
+  border-radius: 25rpx;
+}
+.input-content input{
+  text-indent: 3rpx;
+  padding:6rpx 0 6rpx 1em;
+}
+.both{
+  height: 80px;
+  width: 700rpx;
+  background-color: #fff;
+}

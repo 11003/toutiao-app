@@ -1,0 +1,24 @@
+<!--pages/detail/detail.wxml-->
+<import src="../../wxParse/wxParse.wxml"/>
+<view id="content">
+	<view class="title">{{ title }}</view>
+	<view class="media">
+		<view class="source">{{ source }}</view>
+		<view class="time">{{ time }}</view>
+	</view>
+	<view class="content">
+		<template is="wxParse" data="{{wxParseData:body.nodes}}"/>
+	</view>
+</view>
+<view class="both"></view>
+<view id="comment" hidden="{{isComment}}">
+	<view class="input-content">
+		<input placeholder='请输入关键字' bindconfirm='Confirm'/>
+	</view>
+</view>
+<!-- logo展示 -->
+<view id="loadingLogo" hidden="{{isShowLogo}}">
+  <view class="title">
+    你关心的才是头条
+  </view>
+</view>

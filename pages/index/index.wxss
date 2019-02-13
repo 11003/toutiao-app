@@ -1,0 +1,161 @@
+/**index.wxss**/
+#header{
+	height: 90rpx;
+	border-bottom:1rpx solid #e8e8e8;
+}
+#header .search{
+	width: 90rpx;
+	height: 90rpx;
+	padding-right: 5rpx;
+
+	/*图标居中*/
+	display: flex;
+	/*水平居中*/
+	justify-content: center;
+	/*垂直居中*/
+	align-items: center;
+}
+#header .channels{
+	width: 465rpx;
+	height: 90rpx;
+  /* 不允许换行 */
+  white-space: nowrap;
+}
+#header .channels view{
+	display: inline-block;
+	width: 64rpx;
+	height: 84rpx;
+	margin-right: 32rpx;
+	font-size: 30rpx;
+	line-height: 90rpx;
+}
+#header .channels .active{
+	border-bottom: 6rpx solid #f85959;
+	color: #f85959;
+}
+
+/*加号*/
+#header .plus{
+	width: 90rpx;
+	height: 90rpx;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-left:1rpx solid #ddd;
+	box-shadow: -2rpx 0rpx 4rpx #ddd;
+}
+/*用户*/
+#header .user{
+	width: 90rpx;
+	height: 90rpx;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#content{
+	width: 100%;
+	overflow-x: hidden;
+	/* height: 1000rpx; 用js来设置 */
+}
+#content swiper{
+	height: 100%;
+}
+#content .body{
+	display: flex;
+	/*项目位于各行之间留有空白的容器内。*/
+	justify-content: space-between;
+}
+#content .body .title{
+	font-size: 32rpx;
+	margin-right: 15rpx;
+}
+.news-list{
+	height: 100%;
+	width: 690rpx;
+	padding: 0 30rpx;
+}
+/*隐藏滚动条*/
+::-webkit-scrollbar{
+	width: 0;
+	height: 0;
+	color: transparent;
+}
+.media-close{
+	display: flex;
+	/*项目位于各行之间留有空白的容器内。*/
+	justify-content: space-between;
+	/*padding-bottom: 8rpx;*/
+	border-bottom:1rpx solid #e8e8e8;
+
+}
+.news-list .item{
+	min-height: 80rpx;	
+	padding: 15rpx 0rpx;
+}
+.news-list .item .title{
+	font-size:36rpx;
+}
+
+.news-list .item .media{
+	font-size: 23rpx;
+	color: #999999;
+}
+.news-list .item .close{
+		/*图标居中*/
+	display: flex;
+	/*水平居中*/
+	justify-content: center;
+	/*垂直居中*/
+	align-items: center;
+}
+#mark{
+  padding:35rpx 0 0 30rpx;	
+  width:100%;
+  height: 100%;
+  position: absolute;
+  top:0;
+  left:0;
+  background-color: white;
+}
+.mine-channels{
+	padding-top: 40rpx;
+	overflow: hidden;
+}
+.title{
+	margin-bottom: 30rpx;
+}
+.b-title{
+	font-size: 40rpx;
+	font-weight: bold;
+	margin-right: 20rpx;
+}
+.s-title{
+	font-size: 30rpx;
+	color: #999999;
+}
+.channels .item{
+	width: 160rpx;
+	height: 80rpx;
+	float: left;
+	background-color: #f5f5f5;
+	margin:0 20rpx 20rpx 0;
+	font-size: 30rpx;
+	line-height: 80rpx;
+	text-align: center;
+	position: relative;
+}
+.channels .item .close{
+	width: 32rpx;
+	height: 32rpx;
+	position: absolute;
+	right: -15rpx;
+	top:-15rpx;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.other-channels{
+	padding-top:60rpx;
+}
+

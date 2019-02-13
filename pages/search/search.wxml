@@ -1,0 +1,44 @@
+<!--pages/search/search.wxml-->
+<!-- 搜索 start -->
+<view id="search">
+	<view class="input pull-left">
+		<view class="search pull-left">
+			<icon type="search" size="17"/>
+		</view>
+		<view class="input-content">
+        	<input placeholder='请输入关键字' />
+      	</view>
+	</view>
+	<view class="cancel pull-left">
+		<navigator class="" url="../index/index">
+			取消
+		</navigator>
+	</view>
+</view>
+<!-- 搜索 end -->
+<!-- 历史记录 start -->
+<view id="history">
+	<view class="header">
+		<view class="title">历史记录</view>
+		<view class="delete" bindtap='deleteAll'>
+			<image class="" src="../../images/garbage.png" style="width:32rpx;height:32rpx;"></image>
+		</view>
+	</view>
+	<view class="keywords" wx:if="{{ keywordsDel }}">
+		<view class="item pull-left"  wx:for="{{[1,1,1,1,1,1]}}">火箭签约安东尼</view>
+	</view>
+	<view class="toastHidden" hidden="{{ toastHidden }}">空空如也~</view>
+</view>
+<!-- 历史记录 end -->
+
+<!-- 热搜词 start -->
+<view id="hotwords">
+	<view class="header">
+		<view class="title">搜索热词</view>
+	</view>
+	<view class="keywords">
+		<view class="item pull-left"  wx:for="{{[1,1,1,1,1,1]}}">火箭签约安东尼</view>
+	</view>
+</view>
+<!-- 热搜词 end -->
+

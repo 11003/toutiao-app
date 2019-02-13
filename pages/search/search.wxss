@@ -1,0 +1,66 @@
+/* pages/search/search.wxss */
+#search{
+	padding:14rpx 0 14rpx 20rpx;
+	overflow: hidden;
+}
+.input{
+	font-size: 29rpx;
+}
+#search .input{
+	height: 60rpx;
+	width: 600rpx;
+	background-color: #f5f5f5;
+	border-radius: 10rpx;
+}
+.input .search{
+	width: 60rpx;
+	height: 60rpx;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.input-content{
+	padding-top: 8rpx;
+}
+.cancel{
+	width: 120rpx;
+	text-align: center;
+	font-size: 29rpx;
+	line-height: 2em;
+	color: #2a90d7;
+}
+#history,#hotwords{
+	min-height: 20rpx;
+	overflow: hidden;
+}
+.header{
+	padding:20rpx;
+	display: flex;
+	/*项目位于各行之间留有空白的容器内。*/
+	justify-content: space-between;
+}
+.header .title{
+  	font-size: 30rpx;
+  	line-height: 1.7em;
+  	color:#999999;
+}
+.keywords{
+	overflow: hidden;
+  	min-height:30rpx;
+  	padding:30rpx;
+  	padding-top: 0;
+}
+.keywords .item{
+	font-size: 25rpx;
+	width: 200rpx;
+	padding:10rpx 5rpx;
+	border:1rpx solid #e8e8e8;
+	text-align: center;
+	background-color: #eee;
+	border-radius: 25rpx;
+	margin: 5rpx;
+}
+#hotwords .keywords .item{
+	border-radius:none;
+}
+
